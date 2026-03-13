@@ -1,0 +1,12 @@
+{
+  "constants": {
+    "sigma_star_can": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5 / stitch constants; raw=1.053, ref=1.0, formula=sigma_star_can_raw",
+      "source": "artifacts/constants_extracted.json#stitch.sigma_star_can",
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5 / stitch constants",
+      "status": "derived_numeric",
+      "theorem_level": true,
+      "value": 1.053
+    }
+  }
+}

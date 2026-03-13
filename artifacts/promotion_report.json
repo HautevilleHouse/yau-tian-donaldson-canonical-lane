@@ -1,0 +1,19 @@
+{
+  "extracted_source": "artifacts/constants_extracted.json",
+  "framework": "yau_tian_donaldson",
+  "generated_utc": "2026-03-13T04:33:02Z",
+  "promoted_constants": {
+    "eps_coh": 0.0,
+    "k-stability_transfer": 1.0305400000000002,
+    "kappa_canonical": 1.093874,
+    "kappa_compact": 0.8051529790660226,
+    "rho_rigidity": 1.077,
+    "sigma_degeneration": 1.075
+  },
+  "promoted_stitch": {
+    "sigma_star_can": 1.053
+  },
+  "registry_path": "artifacts/constants_registry.json",
+  "schema_version": "2026-03-05",
+  "stitch_path": "artifacts/stitch_constants.json"
+}

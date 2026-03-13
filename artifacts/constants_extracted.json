@@ -1,0 +1,171 @@
+{
+  "constants": {
+    "eps_coh": {
+      "components": {
+        "eps_coh_raw": 0.0
+      },
+      "formula": "eps_coh_raw",
+      "normalized_value": 0.0,
+      "notes": "Strict coherence target.",
+      "raw_value": 0.0,
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "required_positive": false,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Appendix E.6",
+      "status": "derived_numeric",
+      "strict_zero": true,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "k-stability_transfer": {
+      "components": {
+        "c_transfer_raw": 1.118,
+        "e_transfer_raw": 0.121,
+        "transfer_gain_raw": 1.03
+      },
+      "formula": "c_transfer_raw * transfer_gain_raw - e_transfer_raw",
+      "normalized_value": 1.0305400000000002,
+      "notes": "k-stability_transfer theorem-level floor.",
+      "raw_value": 1.0305400000000002,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 6.2 / Appendix E.4",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "kappa_canonical": {
+      "components": {
+        "c_canonical_raw": 1.446,
+        "canonical_density_raw": 0.919,
+        "e_canonical_raw": 0.235
+      },
+      "formula": "c_canonical_raw * canonical_density_raw - e_canonical_raw",
+      "normalized_value": 1.093874,
+      "notes": "kappa_canonical theorem-level floor.",
+      "raw_value": 1.093874,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 4.5 / Appendix A",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "kappa_compact": {
+      "components": {
+        "delta_comp_sup_raw": 0.242
+      },
+      "formula": "1.0 / (1.0 + delta_comp_sup_raw)",
+      "normalized_value": 0.8051529790660226,
+      "notes": "kappa_compact theorem-level floor.",
+      "raw_value": 0.8051529790660226,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5.3 / Appendix C",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "rho_rigidity": {
+      "components": {
+        "rho_rigidity_raw": 1.077
+      },
+      "formula": "rho_rigidity_raw",
+      "normalized_value": 1.077,
+      "notes": "rho_rigidity theorem-level floor.",
+      "raw_value": 1.077,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 6.1 / Appendix D",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "sigma_degeneration": {
+      "components": {
+        "degeneration_floor_raw": 1.392,
+        "metric_loss_raw": 0.168,
+        "restart_loss_raw": 0.149
+      },
+      "formula": "degeneration_floor_raw - metric_loss_raw - restart_loss_raw",
+      "normalized_value": 1.075,
+      "notes": "sigma_degeneration theorem-level floor.",
+      "raw_value": 1.075,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5.2 / Appendix B",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    }
+  },
+  "framework": "yau_tian_donaldson",
+  "generated_utc": "2026-03-13T04:33:02Z",
+  "inputs_path": "artifacts/constants_extraction_inputs.json",
+  "inputs_sha256": "596119af01a0f5e022e1903026e90652e40c4b896274407dcbb14b1db8fd18a2",
+  "schema_version": "2026-03-05",
+  "stitch": {
+    "sigma_star_can": {
+      "components": {
+        "sigma_star_can_raw": 1.053
+      },
+      "formula": "sigma_star_can_raw",
+      "normalized_value": 1.053,
+      "notes": "sigma_star_can theorem-level stitch constant.",
+      "raw_value": 1.053,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5 / stitch constants",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    }
+  }
+}

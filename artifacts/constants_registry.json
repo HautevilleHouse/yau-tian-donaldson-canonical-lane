@@ -1,0 +1,53 @@
+{
+  "constants": {
+    "eps_coh": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=paper/YAU_TIAN_DONALDSON_PREPRINT.md Appendix E.6; raw=0.0, ref=1.0, formula=eps_coh_raw",
+      "source": "artifacts/constants_extracted.json#eps_coh",
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Appendix E.6",
+      "status": "derived_numeric",
+      "theorem_level": true,
+      "value": 0.0
+    },
+    "k-stability_transfer": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 6.2 / Appendix E.4; raw=1.0305400000000002, ref=1.0, formula=c_transfer_raw * transfer_gain_raw - e_transfer_raw",
+      "source": "artifacts/constants_extracted.json#k-stability_transfer",
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 6.2 / Appendix E.4",
+      "status": "derived_numeric",
+      "theorem_level": true,
+      "value": 1.0305400000000002
+    },
+    "kappa_canonical": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 4.5 / Appendix A; raw=1.093874, ref=1.0, formula=c_canonical_raw * canonical_density_raw - e_canonical_raw",
+      "source": "artifacts/constants_extracted.json#kappa_canonical",
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 4.5 / Appendix A",
+      "status": "derived_numeric",
+      "theorem_level": true,
+      "value": 1.093874
+    },
+    "kappa_compact": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5.3 / Appendix C; raw=0.8051529790660226, ref=1.0, formula=1.0 / (1.0 + delta_comp_sup_raw)",
+      "source": "artifacts/constants_extracted.json#kappa_compact",
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5.3 / Appendix C",
+      "status": "derived_numeric",
+      "theorem_level": true,
+      "value": 0.8051529790660226
+    },
+    "rho_rigidity": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 6.1 / Appendix D; raw=1.077, ref=1.0, formula=rho_rigidity_raw",
+      "source": "artifacts/constants_extracted.json#rho_rigidity",
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 6.1 / Appendix D",
+      "status": "derived_numeric",
+      "theorem_level": true,
+      "value": 1.077
+    },
+    "sigma_degeneration": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5.2 / Appendix B; raw=1.075, ref=1.0, formula=degeneration_floor_raw - metric_loss_raw - restart_loss_raw",
+      "source": "artifacts/constants_extracted.json#sigma_degeneration",
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5.2 / Appendix B",
+      "status": "derived_numeric",
+      "theorem_level": true,
+      "value": 1.075
+    }
+  },
+  "updated_at_utc": "2026-03-13T04:33:02Z"
+}

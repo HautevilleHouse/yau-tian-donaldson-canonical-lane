@@ -1,0 +1,21 @@
+title: "Yau-Tian-Donaldson Conjecture via Kähler-Einstein Persistence"
+message: "If you use this workspace, cite the manuscript and theorem notes."
+type: software
+authors:
+  - name: "HautevilleHouse"
+date-released: 2026-03-05
+repository-code: "https://github.com/HautevilleHouse/yau-tian-donaldson-canonical-lane"
+url: "https://github.com/HautevilleHouse/yau-tian-donaldson-canonical-lane"
+license: None
+keywords:
+  - k-stability
+  - kahler-einstein-metrics
+  - complex-geometry
+  - yau-tian-donaldson
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "Yau-Tian-Donaldson Conjecture via Kähler-Einstein Persistence"
+  authors:
+    - name: "HautevilleHouse"
+  date: 2026-03-05

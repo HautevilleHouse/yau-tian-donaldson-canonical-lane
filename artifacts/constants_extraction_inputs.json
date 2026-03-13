@@ -1,0 +1,92 @@
+{
+  "schema_version": "2026-03-05",
+  "framework": "yau_tian_donaldson",
+  "constants": {
+    "kappa_canonical": {
+      "status": "derived_numeric",
+      "formula": "c_canonical_raw * canonical_density_raw - e_canonical_raw",
+      "components": {
+        "c_canonical_raw": 1.446,
+        "canonical_density_raw": 0.919,
+        "e_canonical_raw": 0.235
+      },
+      "reference": 1.0,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 4.5 / Appendix A",
+      "notes": "kappa_canonical theorem-level floor.",
+      "required_positive": true
+    },
+    "sigma_degeneration": {
+      "status": "derived_numeric",
+      "formula": "degeneration_floor_raw - metric_loss_raw - restart_loss_raw",
+      "components": {
+        "degeneration_floor_raw": 1.392,
+        "metric_loss_raw": 0.168,
+        "restart_loss_raw": 0.149
+      },
+      "reference": 1.0,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5.2 / Appendix B",
+      "notes": "sigma_degeneration theorem-level floor.",
+      "required_positive": true
+    },
+    "kappa_compact": {
+      "status": "derived_numeric",
+      "formula": "1.0 / (1.0 + delta_comp_sup_raw)",
+      "components": {
+        "delta_comp_sup_raw": 0.242
+      },
+      "reference": 1.0,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5.3 / Appendix C",
+      "notes": "kappa_compact theorem-level floor.",
+      "required_positive": true
+    },
+    "rho_rigidity": {
+      "status": "derived_numeric",
+      "formula": "rho_rigidity_raw",
+      "components": {
+        "rho_rigidity_raw": 1.077
+      },
+      "reference": 1.0,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 6.1 / Appendix D",
+      "notes": "rho_rigidity theorem-level floor.",
+      "required_positive": true
+    },
+    "k-stability_transfer": {
+      "status": "derived_numeric",
+      "formula": "c_transfer_raw * transfer_gain_raw - e_transfer_raw",
+      "components": {
+        "c_transfer_raw": 1.118,
+        "transfer_gain_raw": 1.03,
+        "e_transfer_raw": 0.121
+      },
+      "reference": 1.0,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 6.2 / Appendix E.4",
+      "notes": "k-stability_transfer theorem-level floor.",
+      "required_positive": true
+    },
+    "eps_coh": {
+      "status": "derived_numeric",
+      "formula": "eps_coh_raw",
+      "components": {
+        "eps_coh_raw": 0.0
+      },
+      "reference": 1.0,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Appendix E.6",
+      "notes": "Strict coherence target.",
+      "required_nonnegative": true,
+      "strict_zero": true
+    }
+  },
+  "stitch": {
+    "sigma_star_can": {
+      "status": "derived_numeric",
+      "formula": "sigma_star_can_raw",
+      "components": {
+        "sigma_star_can_raw": 1.053
+      },
+      "reference": 1.0,
+      "source_section": "paper/YAU_TIAN_DONALDSON_PREPRINT.md Section 5 / stitch constants",
+      "notes": "sigma_star_can theorem-level stitch constant.",
+      "required_positive": true
+    }
+  }
+}

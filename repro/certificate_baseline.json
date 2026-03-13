@@ -1,0 +1,78 @@
+{
+  "all_pass": true,
+  "all_pass_normalized": true,
+  "blockers": {
+    "YTD_G1": [],
+    "YTD_G2": [],
+    "YTD_G3": [],
+    "YTD_G4": [],
+    "YTD_G5": [],
+    "YTD_G6": [],
+    "YTD_GM": []
+  },
+  "derived": {
+    "strict_coh_zero": true,
+    "strict_margin": 0.8051529790660226
+  },
+  "gates": {
+    "YTD_G1": "PASS",
+    "YTD_G2": "PASS",
+    "YTD_G3": "PASS",
+    "YTD_G4": "PASS",
+    "YTD_G5": "PASS",
+    "YTD_G6": "PASS",
+    "YTD_GM": "PASS"
+  },
+  "inputs": {
+    "eps_coh": 0.0,
+    "k-stability_transfer": 1.0305400000000002,
+    "kappa_canonical": 1.093874,
+    "kappa_compact": 0.8051529790660226,
+    "rho_rigidity": 1.077,
+    "sigma_degeneration": 1.075,
+    "sigma_star_can": 1.053
+  },
+  "lane": {
+    "active_lane": "manifold_constrained",
+    "canonical_theorem_lane": "manifold_constrained"
+  },
+  "meta": {
+    "computed_at_utc": "2026-03-13T04:33:02+00:00",
+    "framework": "yau_tian_donaldson"
+  },
+  "normalized": {
+    "blockers": {
+      "G1": [],
+      "G2": [],
+      "G3": [],
+      "G4": [],
+      "G5": [],
+      "G6": [],
+      "GCoh": [],
+      "GM": []
+    },
+    "gates": {
+      "G1": "PASS",
+      "G2": "PASS",
+      "G3": "PASS",
+      "G4": "PASS",
+      "G5": "PASS",
+      "G6": "NA",
+      "GCoh": "PASS",
+      "GM": "PASS"
+    }
+  },
+  "schema": {
+    "g6_policy": "NA means this framework has no standalone pre-coherence G6 gate",
+    "normalized_gate_keys": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "GCoh",
+      "GM"
+    ]
+  }
+}
