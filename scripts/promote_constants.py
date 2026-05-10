@@ -26,6 +26,26 @@ def _resolve(path_str: str) -> Path:
     return PROJECT_ROOT / p
 
 
+def _write_json_stable(path: Path, data: dict[str, Any], volatile_keys: tuple[str, ...]) -> None:
+    existing = None
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text())
+        except Exception:
+            existing = None
+    if isinstance(existing, dict):
+        current = dict(data)
+        prior = dict(existing)
+        for key in volatile_keys:
+            current.pop(key, None)
+            prior.pop(key, None)
+        if current == prior:
+            for key in volatile_keys:
+                if key in existing:
+                    data[key] = existing[key]
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+
+
 def _finite(v: Any) -> bool:
     return isinstance(v, (int, float)) and math.isfinite(float(v))
 
@@ -100,8 +120,8 @@ def promote(
     registry_path.parent.mkdir(parents=True, exist_ok=True)
     stitch_path.parent.mkdir(parents=True, exist_ok=True)
     reg["updated_at_utc"] = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    registry_path.write_text(json.dumps(reg, indent=2, sort_keys=True) + "\n")
-    stitch_path.write_text(json.dumps(stitch, indent=2, sort_keys=True) + "\n")
+    _write_json_stable(registry_path, reg, volatile_keys=("updated_at_utc",))
+    _write_json_stable(stitch_path, stitch, volatile_keys=())
 
     return {"promoted_constants": promoted, "promoted_stitch": promoted_stitch}
 
@@ -132,7 +152,7 @@ def main() -> None:
         **result,
     }
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+    _write_json_stable(report_path, report, volatile_keys=("generated_utc",))
 
     if ns.pretty:
         print(json.dumps(report, indent=2, sort_keys=True))

@@ -8,6 +8,7 @@ import datetime as dt
 import hashlib
 import json
 from pathlib import Path
+from typing import Any
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -20,6 +21,26 @@ def _resolve(path_str: str) -> Path:
     if p.is_absolute():
         return p
     return PROJECT_ROOT / p
+
+
+def _write_json_stable(path: Path, data: dict[str, Any], volatile_keys: tuple[str, ...]) -> None:
+    existing = None
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text())
+        except Exception:
+            existing = None
+    if isinstance(existing, dict):
+        current = dict(data)
+        prior = dict(existing)
+        for key in volatile_keys:
+            current.pop(key, None)
+            prior.pop(key, None)
+        if current == prior:
+            for key in volatile_keys:
+                if key in existing:
+                    data[key] = existing[key]
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
 
 
 def main() -> None:
@@ -42,7 +63,7 @@ def main() -> None:
         ent["sha256"] = hashlib.sha256(p.read_bytes()).hexdigest()
 
     data["generated_utc"] = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    manifest_path.write_text(json.dumps(data, indent=2) + "\n")
+    _write_json_stable(manifest_path, data, volatile_keys=("generated_utc",))
 
     out = {"manifest": str(manifest_path.relative_to(PROJECT_ROOT)), "files": len(files)}
     if ns.pretty:

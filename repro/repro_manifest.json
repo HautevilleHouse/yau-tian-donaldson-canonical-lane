@@ -1,9 +1,5 @@
 {
-  "schema_version": "2026-03-05",
-  "generated_utc": "2026-03-13T04:33:02Z",
-  "lane": "manifold_constrained",
   "baseline_certificate_path": "repro/certificate_baseline.json",
-  "runtime_certificate_path": "repro/certificate_runtime.json",
   "files": [
     {
       "path": "CITATION.cff",
@@ -63,7 +59,7 @@
     },
     {
       "path": "paper/YAU_TIAN_DONALDSON_PREPRINT.md",
-      "sha256": "a657fcf938d91f3170dcdc78ba9ef5a8f5ddf37e8d64aed7c066e7b6625c37f3"
+      "sha256": "9453b25805c9f6f7526a4df929bc7e1eb7aaa5e649fb9ae9f589fb1fc5546c04"
     },
     {
       "path": "repro/REPRO_PACK.md",
@@ -79,15 +75,15 @@
     },
     {
       "path": "repro/run_repro.sh",
-      "sha256": "d6e4768c1d2d722ff303bcca79c385387a03787cc0502abfe1342eb68b2d2c86"
+      "sha256": "92021434cba0f894e24b7c2f162f9fe3ddb7fbba43c6cdb5337b90071580fa8f"
     },
     {
       "path": "scripts/extract_constants.py",
-      "sha256": "61775512903af1abf2a430f74f06797352ca655833bd69fe66b2d89b8c261b6e"
+      "sha256": "730d57dae3fac057e19630db34233183cae269568d43118c943387970081896d"
     },
     {
       "path": "scripts/promote_constants.py",
-      "sha256": "c13fe0f68b0737a319c9feff0e196108b9a49d8acc5ad817f8ae62597c8bc13c"
+      "sha256": "b65eb7a60552c668f04d6331a5256fe4e662ae5e83e769d42f6a141819769356"
     },
     {
       "path": "scripts/release_gate.py",
@@ -95,7 +91,7 @@
     },
     {
       "path": "scripts/update_manifest.py",
-      "sha256": "6cee83954c38d792f86564334a5e93750a9842afe569fb4685a3f47def392352"
+      "sha256": "45ae03f10349daebab98b6eb9a0836b7e2d15a48ca5504277c80ec7d4c633d12"
     },
     {
       "path": "scripts/ytd_closure_guard.py",
@@ -105,5 +101,9 @@
       "path": "scripts/README.md",
       "sha256": "f6d25dd090f7f4dbd0e71ee53a6ad080b980f7c571ec1675834ec0f363ba873b"
     }
-  ]
+  ],
+  "generated_utc": "2026-05-10T05:23:25Z",
+  "lane": "manifold_constrained",
+  "runtime_certificate_path": "repro/certificate_runtime.json",
+  "schema_version": "2026-03-05"
 }

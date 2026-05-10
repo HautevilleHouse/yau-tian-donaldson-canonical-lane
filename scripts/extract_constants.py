@@ -33,6 +33,26 @@ def _resolve(path_str: str) -> Path:
     return PROJECT_ROOT / p
 
 
+def _write_json_stable(path: Path, data: dict[str, Any], volatile_keys: tuple[str, ...]) -> None:
+    existing = None
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text())
+        except Exception:
+            existing = None
+    if isinstance(existing, dict):
+        current = dict(data)
+        prior = dict(existing)
+        for key in volatile_keys:
+            current.pop(key, None)
+            prior.pop(key, None)
+        if current == prior:
+            for key in volatile_keys:
+                if key in existing:
+                    data[key] = existing[key]
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+
+
 def _finite(v: Any) -> bool:
     return isinstance(v, (int, float)) and math.isfinite(float(v))
 
@@ -204,7 +224,7 @@ def main() -> None:
 
     extracted = extract(data, inputs_sha)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(extracted, indent=2, sort_keys=True) + "\n")
+    _write_json_stable(out_path, extracted, volatile_keys=("generated_utc",))
 
     if ns.pretty:
         print(json.dumps(extracted, indent=2, sort_keys=True))
