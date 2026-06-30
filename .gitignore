@@ -1,4 +1,4 @@
-.codex_tmp/
+.repro_tmp/
 __pycache__/
 scripts/__pycache__/
 repro/certificate_runtime.json
